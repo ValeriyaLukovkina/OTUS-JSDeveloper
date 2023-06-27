@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import {join} from 'path';
+import { argv } from 'node:process';
 type TTree = {
     files: string[],
     dirs: string[]
@@ -9,8 +10,7 @@ const tree: TTree = {
     files: [],
     dirs: []
 };
-
-let folder = './foo';
+let folder = argv[2] ? `./${argv[2]}` : './foo';
     
 const find = (dir: string) => {
     fs.readdir(dir, (err, files: string[]) => {
