@@ -1,0 +1,9 @@
+<header #viewHeader *ngIf="hide">header</header>
+<br/>
+<button (click)="onToggleHeader()">Toggle header</button>
+<ng-content></ng-content>
+
+<p>life-cycles works!</p>
+
+<input [(ngModel)]="text" (ngModelChange)="onChangeText()"/>
+<footer>footer</footer>
