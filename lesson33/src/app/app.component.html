@@ -27,4 +27,27 @@
 <button (click)="onIncrement()">Increment</button> -->
 
 <h1>RxJs</h1>
+
+GetName: {{userService.getName()}}
+
+<br />
+
+GetUserName: {{userService.getUserName()}}
+
 <app-roles></app-roles>
+
+<p>Parent count: {{ counter }}</p>
+
+<app-wrapper>
+  <app-counter
+    #counterVar
+    [counter]="counter"
+    (counterChanged)="counter = $event"
+  ></app-counter>
+
+  <span footer>Footer from parent</span>
+</app-wrapper>
+
+<br />
+
+<button (click)="onButtonCounter()">onButtonCounter</button>

@@ -1,13 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
 
-  constructor() { }
+export class UserService {
+  constructor(@Inject('userName') private readonly userName: string) {}
 
   getName() {
-    return "Lera"
+    return 'Lera';
+  }
+
+  getUserName() {
+    return this.userName;
   }
 }
