@@ -1,0 +1,12 @@
+<p>counter works!</p>
+
+<span *ngIf="counter != 0; else noData">Counter: {{counter}}</span> //на уровне компоненты
+<br/>
+<span *ngIf="this.counterCounterService.getCounter() as counter; else noData">Counter: {{counter}}</span> //на уровне сервиса
+
+<ng-template #noData>
+    No current Data
+</ng-template>
+<br/>
+
+<button (click)="onIncrementClick()">Инкремент</button>
