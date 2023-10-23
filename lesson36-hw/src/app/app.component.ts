@@ -1,3 +1,4 @@
+import { TranslateService } from './service/translate.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lesson36-hw';
+
+  constructor(public translateService: TranslateService) {}
 }

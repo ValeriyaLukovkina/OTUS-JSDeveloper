@@ -1,3 +1,52 @@
-<p>Последние добавленные слова:</p>
+<div class="container">
+  <div class="content">
+    <h3 class="title">Add word</h3>
+    <form [formGroup]="languageForm">
+      <select class="select" formControlName="language">
+        <option value="ru|en">Русский</option>
+        <option value="en|ru">Английский</option>
+      </select>
+    </form>
 
-<input/>
+    <form class="addWord" #form="ngForm" (ngSubmit)="onSubmit()">
+      <!-- <input
+        class="input"
+        placeholder="Введите слово"
+        #inputEl
+        name="word"
+      /> -->
+      <input
+        class="input"
+        placeholder="Введите слово"
+        #inputEl
+        [formControl]="newWord"
+      />
+      <div class="relatedWords" *ngIf="relatedWords.length > 0">
+        <button
+          class="relatedWord"
+          *ngFor="let relatedWord of relatedWords"
+          (click)="addInDictionary(relatedWord)"
+        >
+          {{ relatedWord }}
+        </button>
+      </div>
+      <!-- <button class="button">Добавить слово</button> -->
+    </form>
+  </div>
+
+  <div class="content">
+    <h5 class="title">Недавно добавленные слова</h5>
+    <div class="words">
+      <p class="word" *ngFor="let elem of dictionary">
+        {{ elem.ru }} - {{ elem.en }}
+      </p>
+    </div>
+    <!-- <button
+      class="button"
+      [ngClass]="{ disabled: false }"
+      *ngIf="dictionary!.length > 10"
+    >
+      Смотреть все
+    </button> -->
+  </div>
+</div>
