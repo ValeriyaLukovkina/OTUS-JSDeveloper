@@ -1,0 +1,83 @@
+.container {
+  margin: 40px 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.time {
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.input {
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+  height: 30px;
+  display: block;
+  margin-bottom: 20px;
+
+  &:hover {
+    border-color: #71717a;
+  }
+
+  &:active {
+    border-color: #dcfd00;
+  }
+
+  &:focus {
+    border-color: #dcfd00;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  background-color: #dcfd00;
+  padding: 4px 10px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  outline: none;
+  height: 30px;
+  box-shadow: inset -2px -2px 3px #71717a;
+  transition: all 0.2s;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.ng-invalid {
+  border-color: #eb5757;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrong {
+  position: absolute;
+  left: 210px;
+  top: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #eb5757;
+}
+
+.error {
+  border-color: #eb5757;
+}

@@ -1,0 +1,22 @@
+.header {
+  background-color: #dcfd00;
+}
+
+.navigation {
+  padding: 36px 0;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.item {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.active {
+  color: red;
+}

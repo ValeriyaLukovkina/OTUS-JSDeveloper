@@ -1,0 +1,34 @@
+<div class="container">
+  <h3 class="title">Упражнения</h3>
+
+  <div *ngIf="!isFinish">
+    <div class="time">Оставшееся время: {{ time }} сек.</div>
+
+    <button *ngIf="!isGame; else game" (click)="startTimer()">start</button>
+  
+    <ng-template #game>
+      <p class="text">{{ askWord }}</p>
+      <div class="wrapper">
+        <input
+          placeholder="Введите ответ"
+          type="text"
+          class="input"
+          [ngClass]="{error: isWrong}"
+          [formControl]="answer"
+        />
+        <div *ngIf="isWrong" class="wrong">Неправильный ответ</div>
+      </div>
+  
+      <div class="buttonWrapper">
+        <button class="button" (click)="check()">Проверить</button>
+  
+        <button class="button" (click)="skip()">Пропустить</button>
+      </div>
+    </ng-template>
+  </div>
+
+  <div *ngIf="isFinish">
+    Игра окончена.
+    Количество правильных ответов: {{countRightAnswer}}
+  </div>
+</div>

@@ -1,0 +1,97 @@
+.content {
+  margin: 40px 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.select {
+  width: 200px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  background-color: #dcfd00;
+  border: 2px solid #000000;
+  border-radius: 8px;
+}
+
+.addWord {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  position: relative;
+}
+
+.input {
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+  height: 30px;
+
+  &:hover {
+    border-color: #71717a;
+  }
+
+  &:active {
+    border-color: #dcfd00;
+  }
+
+  &:focus {
+    border-color: #dcfd00;
+  }
+
+  &.error {
+    border-color: #eb5757;
+  }
+}
+
+.button {
+  background-color: #dcfd00;
+  padding: 4px 10px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  outline: none;
+  height: 30px;
+  box-shadow: inset -2px -2px 3px #71717a;
+  transition: all 0.2s;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.words {
+  margin-bottom: 20px;
+}
+
+.disabled {
+  border: red 1px solid;
+}
+
+.relatedWords {
+  position: absolute;
+  top: 30px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  outline: none;
+  background-color: white;
+  z-index: 2;
+}
+
+.relatedWord {
+  height: 30px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    background-color: grey;
+  }
+}

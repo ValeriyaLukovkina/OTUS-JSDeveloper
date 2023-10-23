@@ -1,0 +1,53 @@
+<!-- <app-login></app-login>
+
+{{ userService.getName() }}
+
+<input [(ngModel)]="text"/>
+
+<br/>
+
+<span [ngClass]="classes">{{text}}</span>
+
+<br/>
+
+<button (click)="onChangeColor('red')">Make red</button>
+&nbsp;
+<button (click)="onChangeColor('blue')">Make blue</button>
+<br/>
+<br/>
+<button (click)="onClick()">Click me</button>
+
+
+<app-life-cycles [inputValue]="appInputValue">
+  <div #variable *ngIf="hide">content</div>
+</app-life-cycles>
+
+<button (click)="onToggle()">Toggle</button>
+
+<button (click)="onIncrement()">Increment</button> -->
+
+<h1>RxJs</h1>
+
+GetName: {{userService.getName()}}
+
+<br />
+
+GetUserName: {{userService.getUserName()}}
+
+<app-roles></app-roles>
+
+<p>Parent count: {{ counter }}</p>
+
+<app-wrapper>
+  <app-counter
+    #counterVar
+    [counter]="counter"
+    (counterChanged)="counter = $event"
+  ></app-counter>
+
+  <span footer>Footer from parent</span>
+</app-wrapper>
+
+<br />
+
+<button (click)="onButtonCounter()">onButtonCounter</button>
