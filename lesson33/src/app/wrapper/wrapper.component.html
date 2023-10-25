@@ -1,0 +1,12 @@
+
+<div class="wrapper">
+    <h2>wrapper component</h2>
+
+    <ng-content></ng-content>
+
+    <button (click)="onClick()">Wrapper button</button>
+</div>
+
+<footer>
+    <ng-content select="[footer]"></ng-content>
+</footer>
